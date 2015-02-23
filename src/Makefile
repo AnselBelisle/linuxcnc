@@ -1410,6 +1410,12 @@ tripodkins-objs := emc/kinematics/tripodkins.o
 obj-m += lineardeltakins.o
 lineardeltakins-objs := emc/kinematics/lineardeltakins.o
 
+obj-m += invkins.o
+invkins-objs := emc/kinematics/invkins.o
+
+obj-m += wallykins.o
+wallykins-objs := emc/kinematics/wallykins.o
+
 obj-m += genhexkins.o
 genhexkins-objs := emc/kinematics/genhexkins.o
 genhexkins-objs += libnml/posemath/_posemath.o
@@ -1602,6 +1608,8 @@ $(RTLIBDIR)/gantrykins$(MODULE_EXT): $(addprefix $(OBJDIR)/,$(gantrykins-objs))
 $(RTLIBDIR)/rotatekins$(MODULE_EXT): $(addprefix $(OBJDIR)/,$(rotatekins-objs))
 $(RTLIBDIR)/tripodkins$(MODULE_EXT): $(addprefix $(OBJDIR)/,$(tripodkins-objs))
 $(RTLIBDIR)/lineardeltakins$(MODULE_EXT): $(addprefix $(OBJDIR)/,$(lineardeltakins-objs))
+$(RTLIBDIR)/invkins$(MODULE_EXT): $(addprefix $(OBJDIR)/,$(invkins-objs))
+$(RTLIBDIR)/wallykins$(MODULE_EXT): $(addprefix $(OBJDIR)/,$(wallykins-objs))
 $(RTLIBDIR)/genhexkins$(MODULE_EXT): $(addprefix $(OBJDIR)/,$(genhexkins-objs))
 $(RTLIBDIR)/genserkins$(MODULE_EXT): $(addprefix $(OBJDIR)/,$(genserkins-objs))
 $(RTLIBDIR)/pumakins$(MODULE_EXT): $(addprefix $(OBJDIR)/,$(pumakins-objs))
